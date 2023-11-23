@@ -6,17 +6,29 @@ public class Main {
         System.out.println("Podaj ciąg znaków");
         String str = ciag.nextLine();
 
-        System.out.println(str);
 
 
         int iloscZnakow = str.length();
 
         System.out.println(iloscZnakow);
 
-       if(iloscZnakow % 2 == 0){
-           String pierwszyZnak = str.substring();
-           String drugiZnak = str.substring();
+       if(iloscZnakow > 2){
+           int rozpocznij = iloscZnakow / 2;
+           int stop = rozpocznij + 1;
+
+           String polaczoneZnaki = str.substring(rozpocznij, stop);
+
+           String wynik = polaczoneZnaki.concat(str);
+
+           System.out.println(wynik);
        }
+       else{
+           System.out.println("Zbyt krótki ciąg znaków");
+       }
+
+
+
+
 
 
 
