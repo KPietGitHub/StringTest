@@ -8,23 +8,37 @@ public class Main {
 
 
 
-        int iloscZnakow = str.length();
+        int ilosc = str.length() / 2 ;
 
-        System.out.println(iloscZnakow);
 
-       if(iloscZnakow > 2){
-           int rozpocznij = iloscZnakow / 2;
-           int stop = rozpocznij + 1;
+       if(str.length() >= 3) {
 
-           String polaczoneZnaki = str.substring(rozpocznij, stop);
+           String wycieteZnaki = str.substring(ilosc, ilosc + 2);
+           String pierwszaCzesc = str.substring(0, ilosc);
+           String drugaCzesc = str.substring(ilosc + 2, str.length());
 
-           String wynik = polaczoneZnaki.concat(str);
+           String wynik = wycieteZnaki.concat(pierwszaCzesc).concat(drugaCzesc);
 
            System.out.println(wynik);
        }
-       else{
+
+       else {
            System.out.println("Zbyt krótki ciąg znaków");
        }
+
+
+
+
+//           String polaczoneZnaki = str.substring(rozpocznij, stop);
+//
+//           String wycieteZnaki = str.substring(0, rozpocznij).concat(str.substring(stop));
+//           System.out.println(polaczoneZnaki);
+//           System.out.println(wycieteZnaki);
+
+
+
+//           System.out.println(wycieteZnaki);
+//           String wynik = polaczoneZnaki.concat(str);
 
 
 
